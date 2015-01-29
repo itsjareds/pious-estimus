@@ -1,0 +1,9 @@
+*.o
+*.swp
+*.swo
+*~
+*.out
+intro_mpi
+pi_serial
+pi_mpi
+
