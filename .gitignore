@@ -6,4 +6,5 @@
 intro_mpi
 pi_serial
 pi_mpi
+*.tar.gz
 
