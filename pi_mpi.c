@@ -119,9 +119,9 @@ int main(int argc, char *argv[]){
     long total = l;
     double pi = (double)hits / (double) (total) * 4.0f;
 
-    printf("Hits in circle: %ld\n", hits);
-    printf("Hits in square: %ld\n", total);
-    printf("Pi estimation:  %lf\n", pi);
+    printf("Hits in circle = %ld\n", hits);
+    printf("Hits in square = %ld\n", total);
+    printf("Estimated pi   = %lf\n", pi);
 
     printf("Time: %lf sec\n", elapsed);
   }
