@@ -7,7 +7,7 @@ MPIFLAGS=
 TAR=tar
 
 BINS=intro_mpi pi_serial pi_mpi
-ARCHIVE=intro_mpi.c pi_serial.c pi_mpi.c Makefile pi.pbs
+ARCHIVE=LICENSE README.md intro_mpi.c pi_serial.c pi_mpi.c Makefile pi.pbs
 
 all: $(BINS)
 
@@ -24,7 +24,7 @@ pi_mpi: pi_mpi.c
 	$(CC) $(CFLAGS) -o $@ $< 
 
 archive: $(ARCHIVE)
-	tar -czf asg2.tar.gz $(ARCHIVE)
+	$(TAR) -czf asg2.tar.gz $(ARCHIVE)
 
 clean:
 	rm -f $(BINS)
