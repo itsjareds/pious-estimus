@@ -84,15 +84,12 @@ int main(int argc, char *argv[]){
   }
 
   /* Start computing delicious homemade pi */
-  //printf("[%d/%d] origin = (%lf, %lf)\n", rank, size, origin.x, origin.y);
 
   long l;
   for (l = 0; l < n; l++) {
     point p;
     p.x = origin.x + frand() * s/2.0f;
-    p.y = origin.y + frand() * s/2.0f; // negative since starting from top left
-    //printf("[%d/%d] p = (%lf, %lf)\n", rank, size, p.x, p.y);
-    //break;
+    p.y = origin.y + frand() * s/2.0f;
 
     // Compare doubles
     if (mag(p) - 1.0f < DELTA) {
