@@ -11,7 +11,7 @@
 #include <math.h>
 #include <time.h>
 
-#define DELTA 0.00001
+#define DELTA 0.000001
 
 typedef struct {
   double x, y;

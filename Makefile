@@ -4,7 +4,7 @@ CFLAGS=
 MPICC=mpicc
 MPIFLAGS=
 
-BINS=intro_mpi pi_serial
+BINS=intro_mpi pi_serial pi_mpi
 
 all: $(BINS)
 
