@@ -2,7 +2,7 @@
 
 #PBS -N pi
 #PBS -l walltime=02:00:00
-#PBS -l select=4:ncpus=16:mpiprocs=16
+#PBS -l select=8:ncpus=16:mpiprocs=16
 #PBS -j oe
 
 cd $PBS_O_WORKDIR

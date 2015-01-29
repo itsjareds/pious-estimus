@@ -11,7 +11,6 @@
 #include <time.h>
 #include <mpi.h>
 
-/* Cap rand() so the results are easily understandable */
 #define RMAX 10
 
 void printArr(int *arr, int count) {
