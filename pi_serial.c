@@ -44,9 +44,6 @@ int main(int argc, char *argv[]){
   srand(time(NULL));
 
   int n, i, hits=0;
-  point zero;
-  zero.x = 0.0f;
-  zero.y = 0.0f;
 
   if (argc < 2) {
     fprintf(stderr, "syntax: %s <n points>\n", argv[0]);
