@@ -43,13 +43,13 @@ int main(int argc, char *argv[]){
   point origin;
   double s; // length of one side of plot
   double origArr[2];
-  long n, hits = 0;
+  long npoints, n, hits = 0;
 
   if (argc < 2) {
     fprintf(stderr, "Syntax: %s <n points>\n", argv[0]);
     exit(1);
   } else {
-    n = strtol(argv[1], NULL, 10);
+    npoints = strtol(argv[1], NULL, 10);
   }
 
   MPI_Status status;
@@ -61,6 +61,9 @@ int main(int argc, char *argv[]){
   MPI_Comm_size(MPI_COMM_WORLD, &size);
 
   srand(rank + time(NULL));
+  n = npoints / size;
+  if (rank == 0 && n * size < npoints)
+    n += npoints - n * size;
   s = 2.0f/sqrt(size);
 
   /** Send out plot section data 
